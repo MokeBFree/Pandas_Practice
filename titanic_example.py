@@ -18,4 +18,16 @@ else:
 
 titanic = pd.read_csv("titanic.csv")
 
-print(titanic.head(8))
+# print(titanic.head(8))
+
+"""Pax over 35"""
+ages = titanic["Age"]
+above_35 = titanic[titanic["Age"] > 35]
+#print(ages.head())
+print(above_35.head())
+
+
+"""Passengers w/ longest names"""
+
+idx = titanic["Name"].str.len().idxmax()
+print(titanic.loc[idx, "Name"])
