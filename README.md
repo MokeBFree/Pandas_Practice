@@ -1,1 +1,3 @@
 # Pandas_Practice
+
+These are my notes from Pandas documentation. Onwards and upwards.
