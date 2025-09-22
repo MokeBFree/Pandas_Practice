@@ -40,3 +40,13 @@ print(titanic["Age"].mean())
 titanic[["Age", "Fare"]].median()
 
 titanic[["Age", "Fare"]].describe()
+
+titanic.agg(
+    {
+        "Age": ["min", "max", "median", "skew"],
+        "Fare": ["min", "max", "median", "mean"],
+    }
+)
+
+'''average age for male vs female'''
+titanic[["Sex", "Age"]].groupby("Sex").mean()
