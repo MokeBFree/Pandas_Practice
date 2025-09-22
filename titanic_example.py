@@ -31,3 +31,12 @@ print(above_35.head())
 
 idx = titanic["Name"].str.len().idxmax()
 print(titanic.loc[idx, "Name"])
+
+
+"""Average age of the Pax"""
+print(titanic["Age"].mean())
+
+"""median age and ticket fare"""
+titanic[["Age", "Fare"]].median()
+
+titanic[["Age", "Fare"]].describe()
